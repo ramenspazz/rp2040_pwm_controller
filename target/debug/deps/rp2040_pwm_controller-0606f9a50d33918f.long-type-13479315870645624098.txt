@@ -1,0 +1,1 @@
+&'a mut rp2040_hal::pwm::Channel<S, C>: PwmChannelControl

@@ -1,0 +1,3 @@
+cargo:rustc-link-search=/home/hatsuneramen/RustroverProjects/rp-hal/rp2040_pwm_controller/target/debug/build/defmt-3091d3119042242a/out
+cargo:rustc-check-cfg=cfg(c_variadic)
+cargo:rustc-check-cfg=cfg(no_cas)
