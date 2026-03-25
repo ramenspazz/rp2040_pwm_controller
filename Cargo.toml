@@ -1,12 +1,20 @@
 [package]
-name = "rp2040_pwm_controller"
-version = "0.1.0"
-edition = "2024"
+name = "pwm-led-fader"
+version = "0.2.0"
+edition = "2026"
+authors = ["ramenspazz <kirisame.ramen@protonmail.com>"]
+description = "Simple, no_std PWM LED fader / smoother with fixed update intervals. Works with any embedded-hal 1.0 PWM channel."
+repository = "https://github.com/ramenspazz/pwm-led-fader"  # optional but recommended
+license = "MIT OR Apache-2.0"
+keywords = ["embedded", "no_std", "pwm", "led", "fader"]
+categories = ["embedded", "no-std"]
+readme = "README.md"
 
 [dependencies]
-fugit = "0.3.9"
-# rp2040-hal can be version 0.12.0, but I am using 0.11.0 for compatibility with the I2C audio
-# Edit to the above note: I removed the dependancy on the I2S package.
-rp2040-hal = { version = "0.12.0", features = ["critical-section-impl"] }
-embedded-hal = "1.0"
-heapless = "^0.8"
+rp2040-hal = { version = "^0.12.0" }
+embedded-hal = "1.0.0"
+heapless = { version = "0.8", default-features = false }  # for the fixed-size Vec
+
+[features]
+default = []
+# No "std" feature needed — the crate is pure no_std + heapless
