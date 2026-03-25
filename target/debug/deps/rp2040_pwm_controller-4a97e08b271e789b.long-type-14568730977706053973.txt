@@ -1,1 +1,0 @@
-&mut (&'a mut (dyn PwmChannelControl + 'a), PwmLedState)
