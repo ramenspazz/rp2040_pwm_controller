@@ -4,7 +4,7 @@ version = "0.2.0"
 edition = "2026"
 authors = ["ramenspazz <kirisame.ramen@protonmail.com>"]
 description = "Simple, no_std PWM LED fader / smoother with fixed update intervals. Works with any embedded-hal 1.0>
-repository = "https://github.com/ramenspazz/rp2040_pwm_controller"  # optional but recommended
+repository = "https://github.com/ramenspazz/rp2040_pwm_controller"
 license = "Apache-2.0"
 keywords = ["embedded", "no_std", "pwm", "led", "fader"]
 categories = ["embedded", "no-std"]
@@ -17,4 +17,4 @@ heapless = { version = "0.8", default-features = false }  # for the fixed-size V
 
 [features]
 default = []
-# No "std" feature needed — the crate is pure no_std + heapless
+
